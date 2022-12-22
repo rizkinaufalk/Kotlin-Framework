@@ -1,4 +1,4 @@
-package com.example.myapplication.view.dashboard
+package com.example.myapplication.features.dashboard
 
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.repository.GlobalRepository

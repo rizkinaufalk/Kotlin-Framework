@@ -17,7 +17,7 @@
 package com.example.myapplication.di.builder
 
 
-import com.example.myapplication.view.dashboard.DashboardFragment
+import com.example.myapplication.features.dashboard.DashboardFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

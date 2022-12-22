@@ -2,7 +2,7 @@ package com.example.myapplication.di.module
 
 import androidx.lifecycle.ViewModel
 import com.example.myapplication.MainActivityViewModel
-import com.example.myapplication.view.dashboard.DashboardViewModel
+import com.example.myapplication.features.dashboard.DashboardViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -19,5 +19,5 @@ abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(DashboardViewModel::class)
-    abstract fun bindUserViewModel(dashboardViewModel: DashboardViewModel): ViewModel
+    abstract fun bindDashboardViewModel(dashboardViewModel: DashboardViewModel): ViewModel
 }

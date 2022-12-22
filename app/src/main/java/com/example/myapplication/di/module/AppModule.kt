@@ -9,12 +9,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module(includes = [ViewModelModule::class])
+@Module(
+    includes = [ViewModelModule::class,
+        CoreDataModule::class]
+)
 class AppModule {
     @Singleton
     @Provides
-    fun provideApiService(okHttpClient: OkHttpClient,
-    converterFactory: GsonConverterFactory,
+    fun provideApiService(
+        okHttpClient: OkHttpClient,
+        converterFactory: GsonConverterFactory,
     ) = provideService(okHttpClient, converterFactory, ApiService::class.java)
 
     private fun createRetrofit(
@@ -29,8 +33,10 @@ class AppModule {
             .build()
     }
 
-    private fun <T> provideService(okhttpClient: OkHttpClient,
-                                   converterFactory: GsonConverterFactory, clazz: Class<T>): T {
+    private fun <T> provideService(
+        okhttpClient: OkHttpClient,
+        converterFactory: GsonConverterFactory, clazz: Class<T>
+    ): T {
         return createRetrofit(okhttpClient, converterFactory).create(clazz)
     }
 }
