@@ -1,4 +1,4 @@
-# Kotlin Framework
+# Kotlin Project Structure
 
 Hello everyone, My name is Kiki. I've been working as Mobile Android Developer for over 2 Years. I'm using Java for the whole my career as Android Developer. I know Kotlin become preferred language By Google since 2019. But, My current company doesn't said so :) because the complexity of our Business Flow project and we don't have time for it makes migrating to Kotlin is nearly impossible. This year, I want to stretch my brain for trying to keep up with the updated technology and feature. So i tried to make Kotlin Framework with updated library from our Java Framework.
 
